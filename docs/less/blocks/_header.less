@@ -1,0 +1,232 @@
+.header {
+    max-width: 1600px;
+    padding-top: 60px;
+    padding-bottom: 240px;
+    margin: 0 auto;
+    background-image: url("../img/backgrounds/header-bg.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat-y;
+}
+
+.header__main-content {
+    margin-bottom: 147px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-link {
+    color: var(--text);
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.header__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu {
+    margin-right: 390px;
+
+    .header__menu-link:last-child {
+        margin-right: 0;
+    }
+}
+
+.header__menu-link {
+    position: relative;
+    margin-right: 74px;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 2;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        height: 6px;
+        width: 0%;
+        background-color: var(--yellow);
+        z-index: -1;
+        transition: 0.5s;
+    }
+
+    &:hover:after,
+    &:active:after,
+    .active {
+        width: 100%;
+    }
+
+    &:focus {
+        border: 3px dashed var(--red);
+    }
+}
+
+.header__socials {
+
+    .header__socials-link:last-child {
+        margin-right: 0;
+    }
+}
+
+.header__socials-link {
+    margin-right: 9px;
+    width: 35px;
+    height: 35px;
+}
+
+.header__socials-link--linked:hover path,
+.header__socials-link--linked:active path {
+    fill: #0077b5;
+}
+
+.header__socials-link--github:hover path,
+.header__socials-link--github:active path {
+    fill: #6bc544;
+}
+
+.header__socials-link--vk:hover path,
+.header__socials-link--vk:active path {
+    fill: #45668e;
+}
+
+.header__main-info {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.header__content-block {
+    width: 50%;
+}
+
+.main-info__picture {
+    margin-left: auto;
+    position: relative;
+    width: 457px;
+    height: 410px;
+    overflow: hidden;
+    z-index: 2;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: -140px;
+        bottom: -130px;
+        background-image: linear-gradient(to top, #f4f8f9 0%, rgba(244, 248, 249, 0) 100%);
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.main-info__about h1 {
+    margin-bottom: 13px;
+}
+
+.main-info__about p {
+    margin-bottom: 35px;
+    width: 490px;
+    text-shadow: 0 3px 42px #ffffff;
+    color: #393f47;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.main-info__links-wrapper {
+    display: flex;
+}
+
+.main-info__about a:first-of-type {
+    margin-right: 20px;
+}
+
+.header-pic {
+    max-width: 1600px;
+    margin-top: -120px;
+}
+
+.header__additional-info {
+    display: flex;
+}
+
+.header__content-block--large {
+    width: 680px;
+    margin-right: auto;
+}
+
+.header__content-block--narrow {
+    width: 320px;
+    margin-right: 42px;
+}
+
+.additional-info__skills .section-title {
+    margin-bottom: 26px;
+}
+
+.additional-info__skills-list {
+    margin-bottom: 38px;
+}
+
+.additional-info__skills-item {
+    position: relative;
+    padding-left: 28px;
+    text-shadow: 0 3px 42px #ffffff;
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+.additional-info__skills-item:before {
+    content: "";
+    width: 23px;
+    height: 2px;
+    background-color: var(--text);
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.additional-info__contacts .socials-block{
+    margin-bottom: 25px;
+}
+
+.additional-info__contacts .section-title {
+    margin-bottom: 32px;
+}
+
+.additional-info__email {
+    text-shadow: 0 3px 42px #ffffff;
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--text);
+    line-height: 1.2;
+
+    &:hover {
+        color: var(--blue);
+        border-bottom-color: var(--blue); 
+    }
+
+    &:active {
+        color: #ea655f;
+        border-bottom-color: #ea655f;
+    }
+}
