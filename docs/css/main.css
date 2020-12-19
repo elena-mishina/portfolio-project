@@ -75,11 +75,6 @@ p::selection {
     padding: 0;
   }
 }
-.container-big {
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-}
 .bottom-line {
   position: relative;
   z-index: 2;
@@ -139,7 +134,7 @@ p::selection {
   color: #181818;
   border-color: #181818;
 }
-.section-title {
+.block-title {
   text-shadow: 0 3px 42px #ffffff;
   color: var(--text);
   font-size: 40px;
@@ -156,6 +151,16 @@ p::selection {
 .socials-block__link:active {
   opacity: 0.8;
 }
+.logo-link {
+  display: block;
+  color: var(--text);
+  font-size: 42px;
+  font-weight: 900;
+}
+.logo-link:hover,
+.logo-link:focus {
+  opacity: 0.7;
+}
 .header {
   max-width: 1600px;
   padding-top: 60px;
@@ -166,26 +171,21 @@ p::selection {
   background-position: center;
   background-repeat: repeat-y;
 }
-.header__main-content {
+.header__nav {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 147px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.header__logo-link {
-  color: var(--text);
-  font-size: 42px;
-  font-weight: 900;
 }
 .header__links {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header__menu {
-  margin-right: 390px;
-}
-.header__menu .header__menu-link:last-child {
+.header__menu-link:last-child {
   margin-right: 0;
 }
 .header__menu-link {
@@ -240,10 +240,11 @@ p::selection {
   z-index: 3;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: flex-end;
 }
-.header__content-block {
-  width: 50%;
+.main-info__picture-wrapper {
+  width: 41%;
 }
 .main-info__picture {
   margin-left: auto;
@@ -270,6 +271,9 @@ p::selection {
   object-fit: cover;
   object-position: center;
 }
+.main-info__about-wrapper {
+  width: 54%;
+}
 .main-info__about h1 {
   margin-bottom: 13px;
 }
@@ -294,16 +298,12 @@ p::selection {
 }
 .header__additional-info {
   display: flex;
+  justify-content: space-between;
 }
-.header__content-block--large {
-  width: 680px;
-  margin-right: auto;
+.additional-info__skills-wrapper {
+  width: 60%;
 }
-.header__content-block--narrow {
-  width: 320px;
-  margin-right: 42px;
-}
-.additional-info__skills .section-title {
+.additional-info__skills .block-title {
   margin-bottom: 26px;
 }
 .additional-info__skills-list {
@@ -327,10 +327,13 @@ p::selection {
   top: 50%;
   left: 0;
 }
+.additional-info__contacts-wrapper {
+  width: 32%;
+}
 .additional-info__contacts .socials-block {
   margin-bottom: 25px;
 }
-.additional-info__contacts .section-title {
+.additional-info__contacts .block-title {
   margin-bottom: 32px;
 }
 .additional-info__email {

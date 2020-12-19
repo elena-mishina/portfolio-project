@@ -78,12 +78,6 @@ p::selection {
     }
 }
 
-.container-big {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .bottom-line {
     position: relative;
     z-index: 2;
@@ -156,7 +150,7 @@ p::selection {
     }
 }
 
-.section-title {
+.block-title {
     text-shadow: 0 3px 42px #ffffff;
     color: var(--text);
     font-size: 40px;
@@ -176,5 +170,17 @@ p::selection {
     &:focus,
     &:active {
         opacity: 0.8;
+    }
+}
+
+.logo-link {
+    display: block;
+    color: var(--text);
+    font-size: 42px;
+    font-weight: 900;
+
+    &:hover,
+    &:focus {
+        opacity: 0.7;
     }
 }
