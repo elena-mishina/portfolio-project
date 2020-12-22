@@ -109,6 +109,20 @@ p::selection {
     }
 }
 
+.title-2 {
+    color: var(--text);
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.title-2 .bottom-line {
+
+    &:after {
+        bottom: 15px;
+        height: 12px;
+    }
+}
+
 .button {
     display: inline-block;
     padding-right: 40px;
@@ -147,6 +161,26 @@ p::selection {
         background-color: #fff;
         color: #181818;
         border-color: #181818;
+    }
+}
+
+.button--project {
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #fff;
+    border: none;
+    color: var(--red);
+    font-weight: 800;
+    font-family: inherit;
+    line-height: 52px;
+
+    &:hover {
+        background-color: var(--red);
+        color: #fff;
+    }
+
+    &:active {
+        background-color: #d4423b;
     }
 }
 
