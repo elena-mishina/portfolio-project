@@ -519,6 +519,10 @@ p::selection {
   margin-bottom: 150px;
   text-align: center;
 }
+.timeline__wrapper {
+  max-width: 1005px;
+  margin: 0 auto;
+}
 .timeline__item {
   position: relative;
   width: 100%;
