@@ -540,6 +540,9 @@ p::selection {
   bottom: 0;
   left: 35px;
 }
+.timeline__item:hover .bottom-line:after {
+  background-color: var(--red);
+}
 @media (min-width: 768px) {
   .timeline__item {
     width: 50%;
