@@ -262,7 +262,7 @@ p::selection {
 .header__socials-link--vk:active path {
   fill: #45668e;
 }
-.header__main-info {
+.header__main-info-content {
   position: relative;
   z-index: 3;
   display: flex;
@@ -302,10 +302,10 @@ p::selection {
 .main-info__about-wrapper {
   width: 54%;
 }
-.main-info__about h1 {
+.main-info__about-wrapper h1 {
   margin-bottom: 13px;
 }
-.main-info__about p {
+.main-info__about-wrapper p {
   margin-bottom: 35px;
   width: 490px;
   text-shadow: 0 3px 42px #ffffff;
@@ -314,24 +314,28 @@ p::selection {
   font-weight: 500;
   line-height: 1.5;
 }
+.main-info__about-wrapper a:first-of-type {
+  margin-right: 20px;
+}
 .main-info__links-wrapper {
   display: flex;
-}
-.main-info__about a:first-of-type {
-  margin-right: 20px;
 }
 .header-pic {
   max-width: 1600px;
   margin-top: -120px;
 }
 .header__additional-info {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+.header__additional-info-content {
   display: flex;
   justify-content: space-between;
 }
 .additional-info__skills-wrapper {
   width: 60%;
 }
-.additional-info__skills .block-title {
+.additional-info__skills-wrapper .block-title {
   margin-bottom: 26px;
 }
 .additional-info__skills-list {
@@ -358,10 +362,10 @@ p::selection {
 .additional-info__contacts-wrapper {
   width: 32%;
 }
-.additional-info__contacts .socials-block {
+.additional-info__contacts-wrapper .socials-block {
   margin-bottom: 25px;
 }
-.additional-info__contacts .block-title {
+.additional-info__contacts-wrapper .block-title {
   margin-bottom: 32px;
 }
 .additional-info__email {
@@ -389,10 +393,8 @@ p::selection {
   margin-bottom: 48px;
 }
 .projects__menu {
-  width: 824px;
   margin-bottom: 44px;
   display: flex;
-  justify-content: space-between;
 }
 .projects__menu-item {
   padding: 0;
@@ -408,6 +410,9 @@ p::selection {
 .projects__menu-item:active {
   color: #ed574f;
 }
+.projects__menu-item + .projects__menu-item {
+  margin-left: 80px;
+}
 .projects__menu .control-active {
   color: var(--text);
 }
@@ -421,7 +426,6 @@ p::selection {
   width: 100%;
   max-width: 360px;
   margin-bottom: 60px;
-  transition: 0.5s;
   overflow: hidden;
 }
 .project__card--big {
@@ -502,5 +506,113 @@ p::selection {
 }
 .project__card--big .project-card__text {
   font-size: 22px;
+}
+.timeline {
+  padding-top: 127px;
+  padding-bottom: 145px;
+  background-image: url("../img/backgrounds/timeline-bg.jpg");
+  background-size: auto;
+  background-position: center;
+  background-repeat: repeat-y;
+}
+.timeline .title-2 {
+  margin-bottom: 150px;
+  text-align: center;
+}
+.timeline__item {
+  position: relative;
+  width: 100%;
+  min-height: 175px;
+  padding-left: 98px;
+  padding-bottom: 60px;
+}
+.timeline__item:not(:last-child):after {
+  content: "";
+  width: 4px;
+  border-radius: 2px;
+  background-color: #e1eef4;
+  position: absolute;
+  top: 94px;
+  bottom: 0;
+  left: 35px;
+}
+@media (min-width: 768px) {
+  .timeline__item {
+    width: 50%;
+  }
+  .timeline__item:nth-child(even) {
+    margin-left: auto;
+  }
+  .timeline__item:nth-child(even)::after {
+    left: -2px;
+  }
+  .timeline__item:nth-child(even) .timeline__icon {
+    left: auto;
+    left: -37px;
+  }
+  .timeline__item:nth-child(odd) {
+    padding-left: 0;
+    padding-right: 80px;
+    text-align: right;
+  }
+  .timeline__item:nth-child(odd)::after {
+    left: auto;
+    right: -2px;
+  }
+  .timeline__item:nth-child(odd) .timeline__icon {
+    left: auto;
+    right: -37px;
+  }
+  .timeline__item:first-child::before {
+    content: "";
+    width: 4px;
+    height: 57px;
+    border-radius: 2px;
+    background-color: #e1eef4;
+    position: absolute;
+    top: -77px;
+    right: -2px;
+  }
+}
+.timeline__item + .timeline__item {
+  margin-top: 20px;
+}
+.timeline__text {
+  padding-top: 15px;
+}
+.timeline__title {
+  margin-bottom: 8px;
+  color: var(--text);
+  font-size: 26px;
+  font-weight: 800;
+}
+.timeline__title .bottom-line:after {
+  bottom: 3px;
+  height: 7px;
+}
+.timeline__description {
+  margin-bottom: 10px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.timeline__time {
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+}
+.timeline__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 74px;
+  height: 74px;
+  box-shadow: 2px 3px 35px rgba(0, 112, 187, 0.35);
+  border-radius: 28px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*# sourceMappingURL=main.css.map */

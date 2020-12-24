@@ -31,16 +31,16 @@
             </nav>
         </div>
 
-        <div class="container">
-            <div class="header__main-info">
-                <div class="main-info__picture-wrapper">
-                    <div class="main-info__picture">
-                        <img src="./img/elena-mishina.jpg" alt="Елена Мишина">
+        <div class="header__main-info">
+            <div class="container">
+                <div class="header__main-info-content">
+                    <div class="main-info__picture-wrapper">
+                        <div class="main-info__picture">
+                            <img src="./img/elena-mishina.jpg" alt="Елена Мишина">
+                        </div>
                     </div>
-                </div>
 
-                <div class="main-info__about-wrapper">
-                    <div class="main-info__about">
+                    <div class="main-info__about-wrapper">
                         <h1 class="title-1"><span class="bottom-line">Елена</span><br><span class="bottom-line">Мишина</span></h1>
                         <p>Верстальщик сайтов, веб-разработчик. Оперативная верстка. Работаю с соблюдением сроков и выполнением ТЗ.</p>
                         <div class="main-info__links-wrapper">
@@ -51,15 +51,15 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="header-pic">
             <img src="./img/header-pc.png" alt="Рабочее место">
         </div>
 
-        <div class="container">
-            <div class="header__additional-info">
-                <div class="additional-info__skills-wrapper">
-                    <div class="additional-info__skills" id="skills">
+        <div class="header__additional-info" id="skills">
+            <div class="container">
+                <div class="header__additional-info-content">
+                    <div class="additional-info__skills-wrapper">
                         <h3 class="block-title">Что я умею:</h3>
                         <ul class="additional-info__skills-list">
                             <li class="additional-info__skills-item">pixel perfect, полное соответствие макету.</li>
@@ -70,10 +70,8 @@
                         </ul>
                         <a href="#" class="button">Смотреть работы</a>
                     </div>
-                </div>
 
-                <div class="additional-info__contacts-wrapper">
-                    <div class="additional-info__contacts">
+                    <div class="additional-info__contacts-wrapper">
                         <h3 class="block-title">На связи:</h3>
                         <nav class="socials-block">
                             <a href="#" class="socials-block__link">
@@ -106,11 +104,10 @@
                 </div>
             </div>
         </div>
-        
     </header>
 
     <main>
-        <div class="portfolio">
+        <section class="portfolio">
             <div class="container">
                 <h2 class="title-2"><span class="bottom-line">Портфолио</span></h2>
 
@@ -185,8 +182,72 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="timeline">
+            <div class="container">
+                <h2 class="title-2"><span class="bottom-line">Как я работаю</span></h2>
+
+                <div class="timeline__wrapper">
+                    <div class="timeline__item">
+                        <div class="timeline__text">
+                            <h4 class="timeline__title"><span class="bottom-line">Оцениваю макет</span></h4>
+                            <p class="timeline__description">Оцениваю объем работы, сложность, нюансы. Задаю вопросы.</p>
+                            <p class="timeline__time">Время: 2 - 4 часа</p>
+                        </div>
+                        <div class="timeline__icon">
+                            <img src="./img/icons/layers.png" alt="Иконка-1">
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__text">
+                            <h4 class="timeline__title"><span class="bottom-line">ТЗ, смета и график работ</span></h4>
+                            <p class="timeline__description">Согласовываем техническое задание и график работ по проекту. Осмечиваю стоимость по этапам работы.</p>
+                            <p class="timeline__time">Время: 2 - 4 часа</p>
+                        </div>
+                        <div class="timeline__icon">
+                            <img src="./img/icons/presentation-chart.png" alt="Иконка-2">
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__text">
+                            <h4 class="timeline__title"><span class="bottom-line">Вы держите руку на пульсе</span></h4>
+                            <p class="timeline__description">Выдаю клиенту доступ к GitHub репозиторию и доске Trello. Вы в любое время можете видеть актуальное состояние проекта и задач.</p>
+                            <p class="timeline__time">Время: 2 часа</p>
+                        </div>
+                        <div class="timeline__icon">
+                            <img src="./img/icons/24-hours.png" alt="Иконка-3">
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__text">
+                            <h4 class="timeline__title"><span class="bottom-line">Выполняю каждый этап</span></h4>
+                            <p class="timeline__description">Поочередно выполняю каждый этап работы. Передаю результаты. Заказчик производит поэтапную оплату.</p>
+                            <p class="timeline__time">Время: 2 - 4 часа</p>
+                        </div>
+                        <div class="timeline__icon">
+                            <img src="./img/icons/code-alt.png" alt="Иконка-4">
+                        </div>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__text">
+                            <h4 class="timeline__title"><span class="bottom-line">Финальное ревью проекта</span></h4>
+                            <p class="timeline__description">Проект готов. Финальное ревью и полировка до идеального состояния. Передаю файлы проекта, заливаю сайт на хостинг заказчика.</p>
+                            <p class="timeline__time">Время: 2 - 4 часа</p>
+                        </div>
+                        <div class="timeline__icon">
+                            <img src="./img/icons/diamond.png" alt="Иконка-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    
     <script src="./libs/jquery/jquery-3.5.1.min.js"></script>
     <script src="./libs/mixitup3/mixitup.min.js"></script>
     <script src="./js/main.js"></script>

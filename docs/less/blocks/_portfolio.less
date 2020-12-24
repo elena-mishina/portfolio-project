@@ -9,10 +9,8 @@
 }
 
 .projects__menu {
-    width: 824px;
     margin-bottom: 44px;
     display: flex;
-    justify-content: space-between;
 }
 
 .projects__menu-item {
@@ -28,6 +26,10 @@
     &:focus,
     &:active {
         color: #ed574f;
+    }
+
+    & + & {
+        margin-left: 80px;
     }
 }
 
