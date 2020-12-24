@@ -1,0 +1,86 @@
+.contacts {
+    padding-top: 145px;
+    padding-bottom: 150px;
+    background-color: #f4f8f9;
+    background-image: url("../img/backgrounds/contacts-bg.jpg");
+    background-size: auto;
+    background-position: center;
+    background-repeat: repeat-y;
+    position: relative;
+
+    &:before {
+        content: "";
+        width: 448px;
+        height: 292px;
+        position: absolute;
+        top: 277px;
+        left: 0;
+        background-image: url("../img/backgrounds/bg-dots.png");
+        background-repeat: no-repeat;
+    }
+}
+
+.contacts .title-2 {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.contacts__wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contacts__content {
+    width: 45%;
+}
+
+.contacts__text {
+    margin-bottom: 45px;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.contacts__details {
+    margin-bottom: 45px;
+}
+
+.contacts__item {
+    display: flex;
+    align-items: center;
+
+    & + & {
+        margin-top: 30px;
+    }
+}
+
+.contacts__type {
+    width: 190px;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.contacts__data {
+    font-size: 20px;
+    font-weight: 500;
+
+    &--email,
+    &--skype {
+        color: var(--blue);
+
+        &:hover,
+        &:active {
+            color: #ea655f;
+        }
+    }
+
+    &--tel,
+    &--address {
+        color: #96969d;
+    }
+}

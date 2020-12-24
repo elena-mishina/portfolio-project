@@ -1,0 +1,49 @@
+.contact-form {
+    width: 511px;
+    box-shadow: 0 28px 100px #c2dbeb;
+    background-color: #ffffff;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 40px;
+    padding-left: 60px;
+}
+
+.contact-form__item {
+    position: relative;
+
+    .contact-form__field {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid #eaeaea;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    textarea.contact-form__field {
+        height: 130px;
+    }
+}
+
+.fake-placeholder {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #bcbcbc;
+    font-size: 20px;
+    font-weight: 700;
+    pointer-events: none;
+    transition: 0.5s;
+
+    &.active {
+        top: -30px;
+        color: #ed9626;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+.error {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 0, 0);
+}

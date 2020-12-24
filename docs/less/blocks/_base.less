@@ -45,8 +45,20 @@ svg {
     max-width: 100%;
 }
 
-button, input {
+button, input, textarea {
     outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
 }
 
 button, a {
