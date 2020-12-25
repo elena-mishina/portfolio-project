@@ -116,7 +116,7 @@ p::selection {
 .title-1 .bottom-line {
 
     &:after {
-        bottom: 25px;
+        bottom: 22px;
         height: 12px;
     }
 }
@@ -177,13 +177,13 @@ p::selection {
 }
 
 .button--project {
+    white-space: nowrap;
     padding-right: 30px;
     padding-left: 30px;
     background-color: #fff;
     border: none;
     color: var(--red);
     font-weight: 800;
-    font-family: inherit;
     line-height: 52px;
 
     &:hover {
@@ -232,5 +232,29 @@ p::selection {
     &:hover,
     &:focus {
         opacity: 0.7;
+    }
+}
+
+#page-nav {
+    position: fixed;
+    right: 80px;
+    top: 60%;
+    z-index: 10;
+
+    li {
+        width: 14px;
+        height: 14px;
+        background-color: #89b4cb;
+        border-radius: 50%;
+        margin-bottom: 25px;
+
+        a {
+            display: block;
+            height: 100%;
+        }
+
+        &.active {
+            background-color: var(--red);
+        }
     }
 }

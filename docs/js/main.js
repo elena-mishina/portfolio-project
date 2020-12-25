@@ -1,5 +1,18 @@
 $(document).ready(function () {
 
+    // Подключение точек пагинации справа page-nav
+	$('#page-nav').onePageNav({
+		currentClass: 'active',
+		changeHash: false,
+		scrollSpeed: 750,
+		scrollThreshold: 0.5,
+		filter: '',
+		easing: 'swing',
+		begin: function () {},
+		end: function () {},
+		scrollChange: function ($currentListItem) {}
+	});
+
     let containerEl = document.querySelector ('#projects-cards');
     let mixer = mixitup(containerEl, {
         classNames: {
@@ -97,5 +110,17 @@ $(document).ready(function () {
 		});
 		// Чтобы по Submit больше ничего не выполнялось - делаем возврат false, чтобы прервать цепчку срабатывания остальных функций
 		return false;
-	}
+    }
+    
+    // ПАРАЛЛАКС ДВИЖЕНИЯ ЗА МЫШКОЙ
+
+    let prxScene = document.querySelector('.contacts')
+    let prxItem = document.querySelectorAll('.move-quotes');
+    prxScene.addEventListener('mousemove', function (e) {
+	let x = e.clientX / window.innerWidth;
+	let y = e.clientY / window.innerHeight;
+	for (let item of prxItem) {
+		item.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+	    }
+    });
 })
