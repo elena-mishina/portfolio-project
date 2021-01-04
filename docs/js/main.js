@@ -1,5 +1,32 @@
 $(document).ready(function () {
 
+    // Мобильное меню
+    const toggleMenu = document.querySelector('.toggle-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const overlay = document.querySelector('#overlay');
+    const bodyEl = document.body;
+
+    toggleMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        bodyEl.classList.toggle('no-scroll');
+    });
+
+    mobileMenu.addEventListener('click', function() {
+        this.classList.remove('active');
+        toggleMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        bodyEl.classList.remove('no-scroll');
+    });
+
+    overlay.addEventListener('click', function() {
+        this.classList.remove('active');
+        toggleMenu.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        bodyEl.classList.remove('no-scroll');
+    });
+
     // Подключение точек пагинации справа page-nav
 	$('#page-nav').onePageNav({
 		currentClass: 'active',
