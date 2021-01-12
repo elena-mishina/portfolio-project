@@ -1,12 +1,23 @@
 .project__card {
     display: block;
     width: 100%;
-    max-width: 360px;
-    margin-bottom: 59px;
+    margin-bottom: 45px;
     overflow: hidden;
 
-    &--big {
-        max-width: 556px;
+    // Планшет
+    @media (min-width: 768px) {
+        max-width: 338px;
+        margin-bottom: 40px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        max-width: 360px;
+        margin-bottom: 59px;
+
+        &--big {
+            max-width: 556px;
+        }
     }
 
     &:hover,
@@ -26,8 +37,18 @@
 }
 
 .project-card__img {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     position: relative;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-bottom: 32px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-bottom: 22px;
+    }
 
     .button--project {
         transform: translate(-50%, -250px);
@@ -56,11 +77,23 @@
 .project-card__title {
     position: relative;
     display: inline-block;
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     color: var(--text);
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
     z-index: 2;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-bottom: 8px;
+        font-size: 24px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-bottom: 3px;
+        font-size: 26px;
+    }
 
     &:after {
         content: "";
@@ -83,21 +116,39 @@
 
 .project-card__text {
     color: var(--text);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
+
+    // Планшет
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
 }
 
 .project__card--big {
 
-    .project-card__title {
-        font-size: 32px;
+    // Планшет
+    @media (min-width: 768px) {
 
-        &:after {
-            bottom: 4px;
-        }
     }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        .project-card__title {
+            font-size: 32px;
     
-    .project-card__text {
-        font-size: 22px;
-    }
+            &:after {
+                bottom: 4px;
+            }
+        }
+
+        .project-card__text {
+            font-size: 22px;
+        }
+    } 
 }

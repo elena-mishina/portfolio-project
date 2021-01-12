@@ -1,35 +1,81 @@
 .portfolio {
-    padding-top: 97px;
-    padding-bottom: 65px;
+    padding-top: 45px;
+    padding-bottom: 90px;
     background-color: #f4f8f9;
 
     .title-2 {
-        margin-bottom: 48px;
+        margin-bottom: 40px;
+    }
+
+    // Планшет
+    @media (min-width: 768px) {
+        padding-top: 62px;
+        padding-bottom: 71px;
+
+        .title-2 {
+            margin-bottom: 38px;
+        }
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        padding-top: 97px;
+        padding-bottom: 65px;
+
+        .title-2 {
+            margin-bottom: 48px;
+        }
     }
 }
 
 .projects__menu {
-    margin-bottom: 44px;
-    display: flex;
+    display: none;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-bottom: 44px;
+        display: flex;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+
+    }
 }
 
 .projects__menu-item {
-    padding: 0;
-    color: #8fa5ae;
-    font-size: 28px;
-    font-weight: 800;
-    border: none;
-    background-color: inherit;
-    font-family: inherit;
+    & + & {
+        margin-left: 46px;
+    }
+
+    // Планшет
+    @media (min-width: 768px) {
+        padding: 0;
+        color: #8fa5ae;
+        font-size: 24px;
+        font-weight: 800;
+        border: none;
+        background-color: inherit;
+        font-family: inherit;
+
+        & + & {
+            margin-left: 50px;
+        }
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        font-size: 28px;
+
+        & + & {
+            margin-left: 80px;
+        }
+    }
 
     &:hover,
     &:focus,
     &:active {
         color: #ed574f;
-    }
-
-    & + & {
-        margin-left: 80px;
     }
 }
 
@@ -41,4 +87,33 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.projects__all-cards {
+    border: none;
+    background-color: inherit;
+    text-shadow: 0 3px 42px #ffffff;
+    color: var(--blue);
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    border-bottom: 1px solid var(--blue);
+    line-height: 1.2;
+
+    &:hover,
+    &:active {
+        color: #ea655f;
+        border-bottom-color: #ea655f;
+    }
+
+    // Планшет
+    @media (min-width: 768px) {
+
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        display: none;
+    }
 }

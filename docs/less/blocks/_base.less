@@ -166,15 +166,32 @@ p::selection {
 
 .title-2 {
     color: var(--text);
-    font-size: 64px;
+    font-size: 42px;
     font-weight: 800;
+
+    // Планшет
+    @media (min-width: 768px) {
+        font-size: 52px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        font-size: 64px;
+    }
 }
 
-.title-2 .bottom-line {
+.title-2 .bottom-line:after {
+    bottom: 8px;
+    height: 12px;
 
-    &:after {
+    // Планшет
+    @media (min-width: 768px) {
+        bottom: 12px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
         bottom: 15px;
-        height: 12px;
     }
 }
 
