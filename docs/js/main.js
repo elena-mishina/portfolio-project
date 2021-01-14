@@ -1,5 +1,26 @@
 $(document).ready(function () {
 
+    //Валидация поля телефона 
+    $(".phone").mask("+7(999)999-99-99");
+
+    //Ф-ция для позиции курсора
+    $.fn.setCursorPosition = function (pos) {
+        if ($(this).get(0).setSelectionRange) {
+            $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+            var range = $(this).get(0).createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    };
+
+    //Ф-ция для позиции курсора для нашего поля phone
+    $('.phone').click(function () {
+        $(this).setCursorPosition(3); // set position number
+    });
+
     // Мобильное меню
     const toggleMenu = document.querySelector('.toggle-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -94,6 +115,9 @@ $(document).ready(function () {
                 required: true,
                 email: true
             },
+            tel: {
+                required: true
+            },
             subject: {
                 required: true
             },
@@ -105,6 +129,9 @@ $(document).ready(function () {
             email: {
                 required: 'Введите email',
                 email: 'Отсутствует символ @'
+            },
+            tel: {
+                required: 'Введите номер телефона'
             },
             subject: {
                 required: 'Введите тему сообщения'
@@ -180,5 +207,18 @@ $(document).ready(function () {
 			$('.project__card.hide-card').fadeIn();
 			$('.projects__all-cards').hide();
 		}
-	});
+    });
+    
+    // Показать кнопку наверх
+    $('backTop').hide();
+    $(window).scroll(function(){
+        if($(this).width() < 1200){
+            if($(this).scrollTop() > 500){
+                $('#backTop').fadeIn();
+            }
+        }
+        else{
+            $('#backTop').fadeOut();
+        }
+    });
 })

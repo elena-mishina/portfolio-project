@@ -257,8 +257,52 @@ p::selection {
 }
 
 .button--form {
-    padding-left: 40px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 46px;
+
+    // Планшет
+    @media (min-width: 768px) {
+        
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        width: unset;
+        padding-left: 40px;
+        font-size: 22px;
+        line-height: 54px;
+    }
 }
+
+// .button--animated {
+//     position: relative;
+//     overflow: hidden;
+// }
+
+// .button--animated:after {
+//     position: absolute;
+//     content: "";
+//     width: 25px;
+//     height: 200px;
+//     background: linear-gradient(90deg, rgba(255,255,255,0.4990371148459384) 0%, rgba(247,193,138,0.5046393557422969) 100%);
+//     left: 0;
+//     top: -80px;
+//     z-index: 2;
+//     transform: rotate(45deg);
+//     animation-name: btnAnimate;
+//     animation-duration: 5s;
+//     animation-iteration-count: infinite;
+// }
+
+// @keyframes btnAnimate {
+//     0% {
+//         left: -10px;
+//     }
+//     100% {
+//         left: 102%;
+//     }
+// }
 
 .block-title {
     text-shadow: 0 3px 42px #ffffff;
@@ -363,4 +407,18 @@ p::selection {
 
 .none {
     display: none;
+}
+
+#backTop {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 5;
+    width: 50px;
+    color: var(--yellow);
+
+    :hover {
+        color: var(--red);
+    }
 }

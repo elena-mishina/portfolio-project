@@ -110,7 +110,7 @@
                         <h1 class="title-1"><span class="bottom-line">Елена</span><br><span class="bottom-line">Мишина</span></h1>
                         <p>Верстальщик сайтов, веб&#8209;разработчик. Оперативная верстка. Работаю с соблюдением сроков и выполнением ТЗ.</p>
                         <div class="main-info__links-wrapper">
-                            <a href="#skills" class="button">Познакомиться</a>
+                            <a href="#skills" class="button button--animated">Познакомиться</a>
                             <a href="#contacts" class="button button--light">Контакты</a>
                         </div>
                     </div>
@@ -315,7 +315,7 @@
             </div>
         </section>
 
-        <section class="contacts none" id="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <h2 class="title-2"><span class="bottom-line">Контакты</span></h2>
 
@@ -384,6 +384,10 @@
                                 <input type="email" name="email" class="contact-form__field" required>
                             </div>
                             <div class="contact-form__item">
+                                <span class="fake-placeholder">Ваш телефон</span>
+                                <input type="tel" name="tel" class="contact-form__field phone" required>
+                            </div>
+                            <div class="contact-form__item">
                                 <span class="fake-placeholder">Тема письма</span>
                                 <input type="text" name="subject" class="contact-form__field">
                             </div>
@@ -402,7 +406,7 @@
         </section>
     </main>
 
-    <footer class="footer none">
+    <footer class="footer">
         <div class="container">
             <p class="footer__copyright">© 2020 — Елена Мишина</p>
             <div class="footer__text">
@@ -412,10 +416,15 @@
         </div>
     </footer>
 
+    <a href="#header" id="backTop">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-circle-up" class="svg-inline--fa fa-arrow-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm143.6 28.9l72.4-75.5V392c0 13.3 10.7 24 24 24h16c13.3 0 24-10.7 24-24V209.4l72.4 75.5c9.3 9.7 24.8 9.9 34.3.4l10.9-11c9.4-9.4 9.4-24.6 0-33.9L273 107.7c-9.4-9.4-24.6-9.4-33.9 0L106.3 240.4c-9.4 9.4-9.4 24.6 0 33.9l10.9 11c9.6 9.5 25.1 9.3 34.4-.4z"></path></svg>
+    </a>
+
     <script src="./libs/jquery/jquery-3.5.1.min.js"></script>
     <script src="./libs/mixitup3/mixitup.min.js"></script>
     <script src="./libs/jquery.validate/jquery.validate.js"></script>
+    <script src="./libs/jquery.maskedinput/jquery.maskedinput.min.js"></script>
     <script src="./libs/nav/nav.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js"></scr>
 </body>
 </html>

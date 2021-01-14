@@ -1,30 +1,75 @@
 .contacts {
-    padding-top: 127px;
-    padding-bottom: 150px;
+    padding-top: 44px;
+    padding-bottom: 60px;
     background-color: #f4f8f9;
-    background-image: url("../img/backgrounds/contacts-bg.jpg");
-    background-size: auto;
-    background-position: center;
-    background-repeat: repeat-y;
+
+    // Планшет
+    @media (min-width: 768px) {
+        padding-top: 70px;
+        padding-bottom: 83px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        padding-top: 127px;
+        padding-bottom: 150px;
+        background-image: url("../img/backgrounds/contacts-bg.jpg");
+        background-size: auto;
+        background-position: center;
+        background-repeat: repeat-y;
+    }
 }
 
 .contacts .title-2 {
-    margin-bottom: 57px;
+    margin-bottom: 38px;
     text-align: center;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-left: 32px;
+        margin-bottom: 53px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-left: 0;
+        margin-bottom: 57px;
+    }
 }
 
 .contacts__wrapper {
     position: relative;
     z-index: 2;
-    display: flex;
-    justify-content: space-between;
+    
+
+    // Планшет
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+
+    }
 }
 
 .contacts__bg {
-    position: absolute;
-    top: 0;
-    left: -348px;
-    z-index: 1;
+    display: none;
+
+    // Планшет
+    @media (min-width: 768px) {
+
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -348px;
+        z-index: 1;
+    }
 }
 
 .move-quotes {
@@ -34,41 +79,97 @@
 }
 
 .contacts__content {
-    padding-top: 20px;
-    width: 45%;
+    
+
+    // Планшет
+    @media (min-width: 768px) {
+        width: 45%;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        padding-top: 20px;
+    }
 }
 
 .contacts__text {
-    margin-bottom: 41px;
+    margin-bottom: 20px;
     color: var(--text);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.63;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-bottom: 32px;
+        font-size: 18px;
+        line-height: 1.56;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-bottom: 41px;
+        font-size: 20px;
+        line-height: 1.6;
+    }
 }
 
 .contacts__details {
-    margin-bottom: 45px;
+    margin-bottom: 32px;
+
+    // Планшет
+    @media (min-width: 768px) {
+
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-bottom: 45px;
+    }
 }
 
 .contacts__item {
-    display: flex;
-    align-items: center;
-
+    
     & + & {
-        margin-top: 22px;
+        margin-top: 10px;
+    }
+
+    // Планшет
+    @media (min-width: 768px) {
+
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+
+        & + & {
+            margin-top: 22px;
+        }
     }
 }
 
 .contacts__type {
-    width: 190px;
     color: var(--text);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     text-align: left;
+
+    // Планшет
+    @media (min-width: 768px) {
+
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        width: 190px;
+        font-size: 20px;
+    }
 }
 
 .contacts__data {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 
     &--email,
@@ -85,8 +186,42 @@
     &--address {
         color: #96969d;
     }
+
+    // Планшет
+    @media (min-width: 768px) {
+
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+
+.contacts .socials-block {
+    margin-bottom: 45px;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-bottom: 0;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+
+    }
 }
 
 .contacts__form-wrapper {
-    margin-right: 20px;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-top: 7px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-top: 0;
+        margin-right: 20px;
+    }
 }
