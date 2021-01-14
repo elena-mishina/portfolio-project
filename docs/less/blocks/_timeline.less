@@ -1,15 +1,48 @@
 .timeline {
-    padding-top: 127px;
-    padding-bottom: 86px;
-    background-image: url("../img/backgrounds/timeline-bg.jpg");
-    background-size: auto;
-    background-position: center;
-    background-repeat: repeat-y;
+    padding-top: 48px;
+    padding-bottom: 25px;
+    
+    // Планшет
+    @media (min-width: 768px) {
+        padding-top: 72px;
+        padding-bottom: 85px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        padding-top: 127px;
+        padding-bottom: 86px;
+        background-image: url("../img/backgrounds/timeline-bg.jpg");
+        background-size: auto;
+        background-position: center;
+        background-repeat: repeat-y;
+    }
 }
 
 .timeline .title-2 {
-    margin-bottom: 145px;
-    text-align: center;
+    margin-bottom: 44px;
+    font-size: 38px;
+    
+    .bottom-line:after {
+        bottom: 6px;
+    }
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-bottom: 150px;
+        text-align: center;
+        font-size: 52px;
+
+        .bottom-line:after {
+            bottom: 10px;
+        }
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-bottom: 145px;
+        font-size: 64px;
+    }
 }
 
 .timeline__wrapper {
@@ -20,9 +53,9 @@
 .timeline__item {
     position: relative;
     width: 100%;
-    min-height: 175px;
-    padding-left: 85px;
-    padding-bottom: 50px;
+    min-height: 165px;
+    padding-left: 100px;
+    padding-bottom: 40px;
 
     &:not(:last-child):after {
         content: "";
@@ -42,11 +75,18 @@
         }
     }
 
+    & + & {
+        margin-top: 15px;
+    }
+
     @media(min-width: 768px) {
         width: 50%;
+        min-height: 200px;
+        padding-bottom: 18px;
 
         &:nth-child(even) {
             margin-left: auto;
+            padding-left: 70px;
 
             &::after {
                 left: -2px;
@@ -60,7 +100,7 @@
 
         &:nth-child(odd) {
             padding-left: 0;
-            padding-right: 80px;
+            padding-right: 70px;
             text-align: right;
 
             &::after {
@@ -86,42 +126,102 @@
         }
     }
 
-    & + & {
-        margin-top: 20px;
+    // Десктоп
+    @media (min-width: 1200px) {
+        min-height: 175px;
+        padding-left: 85px;
+        padding-bottom: 50px;
+
+        & + & {
+            margin-top: 20px;
+        }
     }
 }
 
 .timeline__text {
-    padding-top: 18px;
+
+    // Планшет
+    @media (min-width: 768px) {
+        padding-top: 20px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        padding-top: 18px;
+    }
 }
 
 .timeline__title {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     color: var(--text);
-    font-size: 26px;
+    font-size: 20px;
     font-weight: 800;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-bottom: 5px;
+        font-size: 24px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-bottom: 8px;
+        font-size: 26px;
+    }
 }
 
-.timeline__title .bottom-line {
+.timeline__title .bottom-line:after {
+    display: none;
 
-    &:after {
+    // Планшет
+    @media (min-width: 768px) {
+
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        display: block;
         bottom: 3px;
         height: 7px;
     }
 }
 
 .timeline__description {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: var(--text);
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.43;
+
+    // Планшет
+    @media (min-width: 768px) {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 1.38;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 1.2;
+    }
 }
 
 .timeline__time {
     color: var(--text);
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
+
+    // Планшет
+    @media (min-width: 768px) {
+        font-size: 18px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        
+    }
 }
 
 .timeline__icon {
