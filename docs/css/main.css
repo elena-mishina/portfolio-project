@@ -616,10 +616,14 @@ p::selection {
     margin-bottom: 0;
   }
 }
+.header__additional-info {
+  padding-top: 50px;
+  margin-top: -50px;
+}
 @media (min-width: 1200px) {
   .header__additional-info {
     padding-top: 100px;
-    margin-top: -130px;
+    margin-top: -120px;
   }
 }
 .header__additional-info-content {
