@@ -91,21 +91,43 @@ $(document).ready(function () {
     for(let item of formItems){
         const thisParent = item.closest('.contact-form__item');
         const thisPlaceholder = thisParent.querySelector('.fake-placeholder');
+
         // Если инпут в фокусе		
         item.addEventListener('focus', function(){
             thisPlaceholder.classList.add('active');
         });
 
+        // // Если инпут теряет фокус
+        // item.addEventListener('blur', function(){
+
+        //     if(item.value.length > 0){
+        //         thisPlaceholder.classList.add('active');
+        //     }
+        //     else{
+        //         thisPlaceholder.classList.remove('active');
+        //     }
+        // });
+
         // Если инпут теряет фокус
         item.addEventListener('blur', function(){
-
-            if(item.value.length > 0){
+            
+            if(item.classList.contains('phone')){
+            	let phone = document.querySelector('.phone');
+				let arr = [];
+				for(let i = 0; i < phone.value.length; i++){
+				    if(phone.value.charCodeAt(i) > 47 && phone.value.charCodeAt(i) < 58) arr.push(phone.value[i])}
+				
+				if(arr.length != 11) thisPlaceholder.classList.remove('active')
+            }
+            else {
+            	if(item.value.length > 0){
                 thisPlaceholder.classList.add('active');
-            }
-            else{
-                thisPlaceholder.classList.remove('active');
-            }
-        });
+	            	}
+	            	else{
+		                thisPlaceholder.classList.remove('active');
+		            }
+        		}
+        })
     }
 
     //FORM VALIDATE
@@ -148,7 +170,7 @@ $(document).ready(function () {
     // Функция AJAX запрoса на сервер
 	function ajaxFormSubmit() {
 
-		let string = $(".contact-form").serialize(); // Соханяем данные введенные в форму в строку.
+		let string = $(".contact-form").serialize(); // Сохраняем данные введенные в форму в строку.
 
 		//Формируем ajax запрос
 		$.ajax({
