@@ -586,6 +586,13 @@ p::selection {
 @media (min-width: 1200px) {
   .main-info__links-wrapper {
     display: flex;
+    flex-wrap: wrap;
+  }
+  .main-info__links-wrapper .button:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  .main-info__links-wrapper .button:last-child {
+    padding-right: 32px;
   }
 }
 .header-pic {
@@ -1089,6 +1096,9 @@ p::selection {
   color: var(--text);
   font-size: 16px;
   font-weight: 300;
+}
+.project-card__text p:not(:last-child) {
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) {
   .project-card__text {
