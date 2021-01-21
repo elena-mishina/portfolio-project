@@ -314,7 +314,7 @@ p::selection {
   #page-nav li {
     width: 14px;
     height: 14px;
-    background-color: #89b4cb;
+    background-color: var(--blue);
     border-radius: 50%;
     margin-bottom: 25px;
   }
@@ -587,12 +587,6 @@ p::selection {
   .main-info__links-wrapper {
     display: flex;
     flex-wrap: wrap;
-  }
-  .main-info__links-wrapper .button:not(:last-child) {
-    margin-bottom: 30px;
-  }
-  .main-info__links-wrapper .button:last-child {
-    padding-right: 32px;
   }
 }
 .header-pic {
